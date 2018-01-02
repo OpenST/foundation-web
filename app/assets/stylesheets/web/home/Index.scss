@@ -1,0 +1,234 @@
+.container-jumbotron{
+  min-height: 100vh;
+  background-image: url('https://d36lai1ppm9dxu.cloudfront.net/assets/open-st/images/open-st-bg-2x-1.png');
+  background-position: bottom;
+  background-repeat: repeat-x;
+  background-size: contain;
+}
+
+.container-mission{
+  padding: 50px 0;
+}
+
+.container-team{
+  padding: 50px 0;
+  background: #f8fbf9;
+
+  .board-team,
+  .advisor-team{
+
+    .thumbnail{
+      padding:0;
+      border: none;
+      background: none;
+      margin-bottom: 0;
+
+      .caption{
+
+        padding: 10px 0;
+
+        [itemprop="name"]{
+          font-size: 20px;
+          height: 28px;
+          line-height: 24px;
+          font-weight: 400;
+          color: #34445b;
+          margin-top: 15px;
+          margin-bottom: 5px;
+        }
+        [itemprop="jobTitle"]{
+          font-size: 14px;
+          height: 18px;
+          line-height: 14px;
+          font-weight: 400;
+          color: #8a8d8b;
+          margin: 5px 0;
+        }
+        .desc{
+          font-size: 12px;
+          line-height: 1.8;
+          color: #595b5e;
+          font-weight: 300;
+        }
+        a{
+          color: #34445b;
+          font-weight: 300;
+          &:hover, &:focus{
+            text-decoration: none;
+            color: #c0993a;
+          }
+        }
+      }
+
+    }
+
+  }
+}
+
+.container-protocol{
+  padding: 50px 0;
+  background-image: url('https://d36lai1ppm9dxu.cloudfront.net/assets/open-st/images/open-st-muted-graphic-2x.png');
+  background-position: bottom;
+  background-repeat: repeat-x;
+  background-size: contain;
+  .protocol{
+    p.secondary{
+      min-height: 180px;
+    }
+    .btn-github{
+      padding: 10px 20px;
+    }
+  }
+}
+
+.container-token{
+  padding: 50px 0;
+
+  .statistic{
+    padding: 20px 0 50px 0;
+    .info{
+      display: inline-block;
+      text-transform: uppercase;
+      margin-left: 20px;
+      vertical-align: middle;
+      .info-title{
+        font-size: 14px;
+        line-height: 2;
+      }
+      .info-count{
+        font-size: 16px;
+        font-weight: 700;
+      }
+    }
+  }
+}
+
+.container-token-buy{
+  padding: 50px 0;
+  background: #f8fbf9;
+
+  .binance-logo{
+    width:220px;
+    padding-bottom: 20px;
+  }
+}
+
+.container-featured{
+  padding: 50px 0;
+
+  .featured-img{
+    width: 100%;
+  }
+}
+
+.container-network-title{
+  min-height: 380px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  background-image: url('https://d36lai1ppm9dxu.cloudfront.net/assets/open-st/images/OpenST-illustration-dark-2x.png');
+  background-color: #34445b;
+  background-position: bottom;
+  background-repeat: repeat-y;
+  background-size: contain;
+
+  h2{
+    color: #ffffff;
+    font-size: 33px;
+    font-weight: 700;
+    text-align: center;
+  }
+  h3{
+    color: #8aa1a9;
+    font-size: 20px;
+    font-weight: 500;
+    text-align: center;
+  }
+}
+
+.container-network-content{
+  padding: 50px 0;
+
+  .network-use-cases{
+    display: block;
+    list-style: none;
+    overflow: hidden;
+    counter-reset: numList;
+
+    li{
+      font-size: 18px;
+      line-height: 1.8;
+      margin: 0 0 20px 10px;
+
+      &:before{
+        font-size: 18px;
+        line-height: 1.8;
+        margin: 2px 0 20px;
+        counter-increment: numList;
+        content: counter(numList);
+        float: left;
+        position: absolute;
+        left: 15px;
+        text-align: center;
+        color: #fff;
+        width: 30px; height: 30px;
+        background: #bbe0cf;
+        border-radius: 50%;
+      }
+    }
+  }
+}
+
+.container-extended-team,
+.container-security-auditors{
+  padding: 50px 0;
+
+  ul{
+    padding: 0;
+    li{
+      list-style-type: none;
+    }
+  }
+  li[itemprop='affiliation']{
+    margin-bottom: 25px;
+    text-align: center;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-align-items: flex-end;
+    align-items: flex-end;
+    -webkit-justify-content: center;
+    justify-content: center;
+    min-height: 66px;
+  }
+
+}
+
+.container-extended-team{
+  background: #f8fbf9;
+}
+
+// Mobile portrait, landscape
+@media (max-width: 767px) {
+
+  .btn-container{
+    text-align: center;
+    .btn-common{
+      width:100%;
+    }
+  }
+
+  .container-protocol{
+    .protocol{
+      p.secondary{
+        min-height: inherit;
+      }
+    }
+  }
+
+  .container-token{
+    .statistic{
+      text-align: center;
+    }
+  }
+
+}

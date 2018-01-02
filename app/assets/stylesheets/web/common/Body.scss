@@ -1,0 +1,126 @@
+// HTML and Body styling
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 60px;
+}
+html,
+body{
+  font-family: 'Roboto', sans-serif;
+  color: #34445b;
+  font-weight: 300;
+  line-height: 1.43;
+}
+
+// Custom .container class
+@media (min-width: 1200px){
+  #site-content{
+    .container {
+      width: 980px;
+    }
+  }
+}
+@media (min-width: 992px){
+  #site-content {
+    .container {
+      width: 960px;
+    }
+  }
+}
+
+// Global helper classes
+#site-content{
+  .vertical-center {
+    min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
+    min-height: 100vh; /* These two lines are counted as one :-)       */
+    display: flex;
+    align-items: center;
+  }
+  p.primary{
+    font-size: 18px;
+    line-height: 1.8;
+    margin: 10px 0 30px;
+
+    a {
+      color: #34445b;
+      text-decoration: none;
+    }
+
+    a:hover,
+    a:active{
+      color: #c0993a;
+      text-decoration: none;
+    }
+  }
+  p.secondary{
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 10px 0 20px;
+  }
+  h1.title{
+    font-size: 50px;
+    font-weight: 700;
+    margin: 10px 0 30px;
+  }
+  h2.title{
+    font-size: 33px;
+    font-weight: 500;
+    margin: 10px 0 30px;
+    .thin{
+      font-weight: 300;
+    }
+  }
+  h3.title{
+    color: #597a84;
+    font-size: 20px;
+    font-weight: 500;
+    margin: 10px 0 30px;
+  }
+}
+
+// Footer CSS
+.container-footer{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+  font-size: 12px;
+  font-weight: 500;
+  @media (max-width: 767px) {
+    font-size: 10px;
+  }
+  letter-spacing: 1.3px;
+  padding: 20px 10px;
+  color: #597a84;
+  background: #f5faf6;
+  text-transform: uppercase;
+  a,
+  a:hover,
+  a:active{
+    color: #9ea9a7;
+    border-bottom: 1px solid #9ea9a7;
+    text-decoration: none;
+  }
+
+  .copyright{
+    //text-align: left;
+    text-align: center;
+  }
+  .privacy{
+    text-align: right;
+  }
+}
+
+@media (max-width: 767px) {
+  .container-footer{
+    .copyright,
+    .privacy{
+      text-align: center;
+      font-size: 7.5px;
+    }
+  }
+}

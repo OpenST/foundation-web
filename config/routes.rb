@@ -1,3 +1,9 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+
+  scope '', controller: 'web/home' do
+    get '/' => :index
+  end
+  # Route not found handler. Should be the last entry here
+  match '*permalink', to: 'application#not_found', via: :all
+
 end
