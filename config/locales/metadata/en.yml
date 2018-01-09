@@ -13,12 +13,12 @@ en:
           :title: 'OpenST Foundation'
           :description: 'The OpenST Foundation is a non-profit Hong Kong membership company with a mandate is to develop the OpenST protocol, oversee the OST token economy and further the OST ecosystem.'
           :type: 'website'
-          :image: 'https://d36lai1ppm9dxu.cloudfront.net/assets/open-st/images/openst-og-v1.png'
+          :image: 'https://d2l8gxdv9ws1x1.cloudfront.net/images/openst-og-v1.png'
           :url: '%{og_url}'
         :twitter:
           :card: 'summary_large_image'
           :title: 'OpenST Foundation'
           :description: 'The OpenST Foundation is a non-profit Hong Kong membership company with a mandate is to develop the OpenST protocol, oversee the OST token economy and further the OST ecosystem.'
-          :image: 'https://d36lai1ppm9dxu.cloudfront.net/assets/open-st/images/openst-og-v1.png'
+          :image: 'https://d2l8gxdv9ws1x1.cloudfront.net/images/openst-og-v1.png'
       :assets:
         :specific_js_required: 1

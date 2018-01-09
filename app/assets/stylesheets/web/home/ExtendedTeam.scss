@@ -1,5 +1,5 @@
-$sprite-retina-location: "https://d36lai1ppm9dxu.cloudfront.net/assets/open-st/images/OpenST-sprite-2x.png";
-$sprite-location: "https://d36lai1ppm9dxu.cloudfront.net/assets/open-st/images/OpenST-sprite-1x.png";
+$sprite-retina-location: "https://d2l8gxdv9ws1x1.cloudfront.net/images/openST-sprite-2x-v2.png";
+$sprite-location: "https://d2l8gxdv9ws1x1.cloudfront.net/images/openST-sprite-2x-v2.png";
 
 @mixin icon-generator($width,$height,$posX,$posY,$offsetHover,$offsetActive,$scale:100) {
   background-image: url($sprite-location);
@@ -105,7 +105,7 @@ $sprite-location: "https://d36lai1ppm9dxu.cloudfront.net/assets/open-st/images/O
   @include icon-generator(240px, 54px, -383px, -1524px, -678px, -678px, 70);
 }
 .blockchain-partners-korea-logo{
-  @include icon-generator(240px, 86px, -383px, -1110px, -643px, -1110px, 70);
+  @include icon-generator(274px, 80px, -384px, -1621px, -678px, -1621px, 61);
 }
 .kryptonite-logo{
   @include icon-generator(238px, 62px, -962px, -30px, -1222px, -962px, 70);
