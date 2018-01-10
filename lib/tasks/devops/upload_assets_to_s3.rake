@@ -2,12 +2,12 @@ namespace :devops do
 
   require 'pathname'
 
-  # rake devops:upload_assets_to_s3 RAILS_ENV=development ST_PROFILE=stf/stc
+  # rake devops:upload_assets_to_s3 RAILS_ENV=development ST_PROFILE=stf-production
   task :upload_assets_to_s3 => :environment do
 
     environment = Rails.env
     asset_bucket = "wa.openst.org"
-    aws_profile = "#{ENV['ST_PROFILE']}-production"
+    aws_profile = ENV['ST_PROFILE']
 
     content_types = {
       '.gz' => 'gzip',
