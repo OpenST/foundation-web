@@ -2,10 +2,12 @@ namespace :devops do
 
   require 'pathname'
 
+  # rake devops:upload_assets_to_s3 RAILS_ENV=development ST_PROFILE=stf/stc
   task :upload_assets_to_s3 => :environment do
 
     environment = Rails.env
     asset_bucket = "wa.openst.org"
+    aws_profile = "#{ENV['ST_PROFILE']}-production"
 
     content_types = {
       '.gz' => 'gzip',
@@ -24,11 +26,11 @@ namespace :devops do
           upload_file_extension = upload_file_name.split(".").last.to_s
           puts file_path
           if upload_file_extension.include?("js")
-            puts "aws s3 cp #{Rails.root.to_s}/public#{Rails.application.config.assets.prefix}/#{file} s3://#{asset_bucket}#{Rails.application.config.assets.prefix}/#{upload_file_name} #{permission_options} --content-type 'application/x-javascript'"
-            %x{aws s3 cp #{Rails.root.to_s}/public#{Rails.application.config.assets.prefix}/#{file} s3://#{asset_bucket}#{Rails.application.config.assets.prefix}/#{upload_file_name} #{permission_options} --content-type 'application/x-javascript'}
+            puts "aws s3 cp #{Rails.root.to_s}/public#{Rails.application.config.assets.prefix}/#{file} s3://#{asset_bucket}#{Rails.application.config.assets.prefix}/#{upload_file_name} #{permission_options} --content-type 'application/x-javascript' --profile #{aws_profile}"
+            %x{aws s3 cp #{Rails.root.to_s}/public#{Rails.application.config.assets.prefix}/#{file} s3://#{asset_bucket}#{Rails.application.config.assets.prefix}/#{upload_file_name} #{permission_options} --content-type 'application/x-javascript' --profile #{aws_profile}}
           elsif upload_file_extension.include?("css")
-            puts "aws s3 cp #{Rails.root.to_s}/public#{Rails.application.config.assets.prefix}/#{file} s3://#{asset_bucket}#{Rails.application.config.assets.prefix}/#{environment}/#{upload_file_name} #{permission_options} --content-type 'text/css'"
-            %x{aws s3 cp #{Rails.root.to_s}/public#{Rails.application.config.assets.prefix}/#{file} s3://#{asset_bucket}#{Rails.application.config.assets.prefix}/#{upload_file_name} #{permission_options} --content-type 'text/css'}
+            puts "aws s3 cp #{Rails.root.to_s}/public#{Rails.application.config.assets.prefix}/#{file} s3://#{asset_bucket}#{Rails.application.config.assets.prefix}/#{environment}/#{upload_file_name} #{permission_options} --content-type 'text/css' --profile #{aws_profile}"
+            %x{aws s3 cp #{Rails.root.to_s}/public#{Rails.application.config.assets.prefix}/#{file} s3://#{asset_bucket}#{Rails.application.config.assets.prefix}/#{upload_file_name} #{permission_options} --content-type 'text/css' --profile #{aws_profile}}
           else
             puts "Can't upload #{file}"
           end
