@@ -6,6 +6,7 @@
 
   openSTNs.index = oThis = {
 
+    // init
     init: function (config) {
 
     }
