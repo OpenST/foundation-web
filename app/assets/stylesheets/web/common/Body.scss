@@ -55,6 +55,13 @@ body{
       color: #c0993a;
       text-decoration: none;
     }
+
+    .external-link{
+      border-bottom: 1px solid #34445b;
+      &:hover{
+        border-bottom: 1px solid #c0993a;
+      }
+    }
   }
   p.secondary{
     font-size: 16px;
