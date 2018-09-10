@@ -38,6 +38,7 @@ body{
     min-height: 95vh; /* These two lines are counted as one       */
     display: flex;
     align-items: center;
+    margin-top: 135px;
   }
   p.primary{
     font-size: 18px;
@@ -53,6 +54,13 @@ body{
     a:active{
       color: #c0993a;
       text-decoration: none;
+    }
+
+    .external-link{
+      border-bottom: 1px solid #34445b;
+      &:hover{
+        border-bottom: 1px solid #c0993a;
+      }
     }
   }
   p.secondary{
