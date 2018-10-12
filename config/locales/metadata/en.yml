@@ -21,4 +21,4 @@ en:
           :description: 'The OpenST Foundation is a non-profit Hong Kong membership company with a mandate is to develop the OpenST protocol, oversee the OST token economy and further the OST ecosystem.'
           :image: 'https://d2l8gxdv9ws1x1.cloudfront.net/images/openst-og-v1.png'
       :assets:
-        :specific_js_required: 1
+        :specific_js_required: 0
