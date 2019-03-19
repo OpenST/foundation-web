@@ -9,9 +9,9 @@ end
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '5.2.2.1'
 # Use SCSS for stylesheets
-gem 'sass-rails', '~> 5.0'
+gem 'sass-rails', '5.0.7'
 # Use Uglifier as compressor for JavaScript assets
-gem 'uglifier', '>= 1.3.0'
+gem 'uglifier', '4.1.9'
 # YUI compressor
 gem 'yui-compressor', '0.12.0'
 # Json formatter
@@ -21,7 +21,7 @@ gem 'sanitize', '4.5.0'
 # Exception notifier
 gem 'exception_notification', '4.2.1'
 
-gem 'listen', '>= 3.0.5', '< 3.2'
+gem 'listen', '3.1.5'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
