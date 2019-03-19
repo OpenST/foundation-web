@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  scope '', controller: 'web/home' do
+  scope '', controller: 'web/home', :format => false do
     get '/' => :index
   end
   # Route not found handler. Should be the last entry here
